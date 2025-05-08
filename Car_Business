@@ -1,0 +1,102 @@
+import random
+
+def rent_car():
+    Toyota = 500
+    Honda = 400
+    Ford = 700
+    Lamborghini = 50000
+    BMW = 15000
+    
+    current_cash = 1000
+    
+    cars = ["Toyota", "Honda", "Ford", "Lamborghini", "BMW"]
+    customer_car = random.choice(cars)
+    
+    car = input("What car would you like to start your car business?: Toyota, Honda, Ford, Lamborghini, BMW\n")
+    
+
+    
+    if car == "Toyota":
+        if current_cash >= Toyota:
+            print("\nOk!\n")
+            cash = current_cash - Toyota
+            print("Your money:", cash)
+        else:
+            print("\nYou do not have enough money!\n")
+            
+    if car == "Honda":
+        if current_cash >= Honda:
+            print("\nOk!\n")
+            cash = current_cash - Honda
+            print("Your money:", cash)
+        else:
+            print("\nYou do not have enough money!\n")
+            
+    if car == "Ford":
+        if current_cash >= Ford:
+            print("\nOk!\n")
+            cash = current_cash - Ford
+            print("Your money:", cash)
+        else:
+            print("\nYou do not have enough money!\n")
+            
+    if car == "Lamborghini":
+        if current_cash >= Lamborghini:
+            print("\nOk!\n")
+            cash = current_cash - Lamborghini
+            print("Your money:", cash)
+        else:
+            print("\nYou do not have enough money!\n")
+
+    if car == "BMW":
+        if current_cash >= BMW:
+            print("\nOk!\n")
+            cash = current_cash - Lamborghini
+            print("Your money:", cash)
+        else:
+            print("\nYou do not have enough money!\n")
+        
+    print("\nhere comes the first customer!")
+    random
+
+    while True:
+        
+        customer = input(f"\nI would like a {customer_car} please! Type {customer_car} to give me a {customer_car}\n")
+
+
+        if customer == "Toyota":
+            current_cash = cash + 600
+            print("\nYour money:", current_cash)
+        if customer == "Honda":
+            current_cash = cash + 400
+            print("\nYour money:", current_cash)
+        if customer == "Ford":
+            current_cash = cash + 1000
+            print("\nYour money:", current_cash)
+        if customer == "Lamborghini":
+            current_cash = cash + 10000
+            print("\nYour money:", current_cash)
+        if customer == "BMW":
+            current_cash = cash + 10000
+        print("\nYour money:", current_cash)
+
+rent_car()
+
+
+def car_mods():
+    bumper_common = 50
+    bumper_rare = 100
+    bumper_cool = 300
+    bumper_legendary = 500
+    
+    wheel_common = 30
+    wheel_rare = 60
+    wheel_cool = 100
+    wheel_legendary = 200
+    
+    spoiler_common = 70
+    spoiler_rare = 120
+    spoiler_cool = 180
+    spoiler_legendary = 250
+    
+car_mods()
