@@ -1,0 +1,43 @@
+               
+def game_inventory():
+    
+    print("1. Place Item in Inventory?")
+    print("2. Delete Item in Inventory?")
+    print("3. View Items in Inventory?")
+    
+    
+    
+    inventory=[]
+    
+    while True:
+        a = int(input("Please pick 1, 2, or 3."))
+        
+        if a == 1:
+            
+            item = input("Add Item: ")
+            
+                
+            inventory.append(item)
+            print(f" {item}' added to inventory.")
+                
+        if a == 2:
+            item = input("Delete Item: ")
+            
+            if item in inventory:
+                inventory.remove(item)
+                print(f" {item}' deleted from inventory.")
+            else:
+                print("Item not found.")
+                
+                
+                
+        if a == 3:
+            print("\n Inventory Contents:")
+            if not inventory:
+                print("Ur inventory is empty!")
+            else:
+                for i, item in enumerate(inventory, 1):
+                    print(f"  {i}. {item}")
+                
+game_inventory()
+        
