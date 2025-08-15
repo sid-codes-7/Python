@@ -1,0 +1,15 @@
+class Solution:
+    def isPalindrome(self, x: int) -> bool:               # defines isPalindrome
+        if x < 0:                                         # makes sure that number isn't less than 0
+            return False
+
+        reverse = 0                                       # stores the reversed number
+        xcopy = x                                         # stores the original number for later comparison
+        while x > 0:                                      
+            reverse = (reverse * 10) + (x % 10)           # (x % 10) -> gets the last digit of x       ||       (reverse * 10) -> moves all digits in *reverse* once place to the left
+            x //= 10                                      # removes the last digit from x
+
+        return reverse == xcopy                           # if *reverse* = original number(xcopy) -> it's a palindrome 
+                                                          # or else its not
+
+        
