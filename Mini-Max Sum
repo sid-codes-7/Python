@@ -1,0 +1,31 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+# minimum = add the first 4/5 values in the array
+# maximum = add the last 4/5 values in the array
+
+def miniMaxSum(arr):
+    # Write your code here
+    sum_num = 0 
+    max_num = max(arr) # get the maximum number from the array
+    min_num = min(arr) # get the minimum number from the array
+    
+    for i in range(len(arr)): 
+        
+        sum_num += arr[i] // add the numbers in the array
+        
+    print(sum_num - max_num, sum_num - min_num) # print the output
+ 
+        
+
+
+if __name__ == '__main__':
+
+    arr = list(map(int, input().rstrip().split()))
+
+    miniMaxSum(arr)
