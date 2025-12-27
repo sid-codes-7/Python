@@ -1,0 +1,56 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+#
+# Complete the 'breakingRecords' function below.
+#
+# The function is expected to return an INTEGER_ARRAY.
+# The function accepts INTEGER_ARRAY scores as parameter.
+#
+
+def breakingRecords(scores):
+    # Write your code here
+
+
+    min_min = scores[0] #set a minimum value in array
+    max_max = scores[0] #set a maximum value in array
+
+    min_count = 0
+    max_count = 0
+    
+    
+    
+    for i in range(1, len(scores)):
+        #if the next element is smaller than the previous, then add one to min_count
+        if scores[i] < min_min:  
+            min_count += 1
+        #and set the min_min to the current minumum value in array
+            min_min = scores[i]
+        #if the next element is greater than the previous, then add one to max_count
+        elif scores[i] > max_max:
+            max_count += 1
+        #and set the max_max to the current maximum value in array
+            max_max = scores[i]    
+
+    return max_count, min_count
+
+
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    n = int(input().strip())
+
+    scores = list(map(int, input().rstrip().split()))
+
+    result = breakingRecords(scores)
+
+    fptr.write(' '.join(map(str, result)))
+    fptr.write('\n')
+
+    fptr.close()
