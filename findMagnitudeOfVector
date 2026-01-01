@@ -1,0 +1,26 @@
+import math
+
+#get the x and y coordinates
+coordinate1 = int(input("First Coordinate(x1): "))
+coordinate2 = int(input("First Coordinate(y1): "))
+coordinate3 = int(input("First Coordinate(x2): "))
+coordinate4 = int(input("First Coordinate(y2): "))
+
+#subtract (y1 - y2) and (x2 - x1)
+subtraction_1 = coordinate4 - coordinate2
+subtraction_2 = coordinate3 - coordinate1
+
+#square each value
+squared = subtraction_1**2
+squared_2 = subtraction_2**2
+
+#find the square root of value
+square_root = math.sqrt(squared + squared_2)
+
+#print the value by only 2 decimals
+print("%.2f" % square_root)
+
+
+
+
+
